@@ -1,0 +1,11 @@
+.page-header
+  %h1= post.title
+  %a.mr3{href: edit_post_path(post.id)} Edit post
+
+%p.lh-copy
+  %i= post.description
+
+.lh-copy= post.body
+
+= form_tag(post_path(post.id), method: :delete) do
+  %button.mt5.fr.delete-button.grow Delete post

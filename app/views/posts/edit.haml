@@ -1,0 +1,6 @@
+.page-header
+  %h1 Edit post
+
+= form_tag(post_path(post_id), method: :put) do
+  != render partial: "fields", locals: { form: form }
+  %button.grow Update post

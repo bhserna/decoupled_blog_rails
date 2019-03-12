@@ -1,0 +1,8 @@
+.page-header
+  %h1 Posts
+  %a{href: new_post_path} New post
+
+- posts.each do |post|
+  .mb4
+    %a.db.mb2.f4{href: post_path(post.id)}= post.title
+    .lh-copy= post.description

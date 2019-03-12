@@ -1,0 +1,6 @@
+.page-header
+  %h1 New post
+
+= form_tag(posts_path, method: :post) do
+  != render partial: "fields", locals: { form: form }
+  %button.grow Create post
